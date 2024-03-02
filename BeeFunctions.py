@@ -142,8 +142,7 @@ def beelineIntro(flower_data: dict, total_scout_bees: int, total_worker_bees: in
     print("# Worker bees fly out to a location, harvest flowers in a 3x3 area around the specified location,")
     print("and also reveal the area they have harvested. However, you only have 5 scout bees and 5 worker")
     print("bees to obtain the 20 units of pollen you need to produce enough honey. Note, once a bee has been")
-    print(
-        "sent out it cannot be used again and a flower can only be harvested once! Oh, and watch out for pitcher plants!")
+    print("sent out it cannot be used again and a flower can only be harvested once! Oh, and watch out for pitcher plants!")
     print("They'll trap your bees and prevent them from returning to the hive. Good luck!\n")
     print("The flowers contains the following units of pollen:")
     for key in list(flower_data.keys()):
@@ -159,56 +158,56 @@ def beeExplore(hidden_field: list, visible_field: list, x: int, y: int, bee_type
     max_x = len(visible_field[0])
     max_y = len(visible_field)
     print(f'{(max_x, max_y) = }')
-    explore_grid = findGrid(max_x, max_y, x, y)
-    for val in explore_grid:
-        print(val)
-        visible_field[val[1]][val[0]] = '#'
+    explore_grid_coordinates = findGridCoordinates(max_x, max_y, x, y)
+    for coordinates in explore_grid_coordinates:
+        print(coordinates)
+        if coordinates == (x, y):
+            visible_field[coordinates[1]][coordinates[0]] = 'Ж'
+        else:
+            visible_field[coordinates[1]][coordinates[0]] = '░'
     return pollen_harvested
 
 
-def findGrid(max_x: int, max_y: int, x: int, y: int) -> list:
-    grid = []
-
+def findGridCoordinates(max_x: int, max_y: int, x: int, y: int) -> list:
+    grid:list = []
     # assuming x, y are valid coordinates (not out of bounds of the 2D List), else this function isn't called.
     grid.append((x, y))
     if x + 1 < max_x:
         grid.append((x + 1, y))
         if y - 1 >= 0:
+            grid.append((x, y - 1))
             grid.append((x + 1, y - 1))
         if y + 1 < max_y:
+            grid.append((x, y + 1))
             grid.append((x + 1, y + 1))
 
     if x - 1 >= 0:
         grid.append((x - 1, y))
         if y - 1 >= 0:
+            grid.append((x, y - 1))
             grid.append((x - 1, y - 1))
         if y + 1 < max_y:
+            grid.append((x, y + 1))
             grid.append((x - 1, y + 1))
 
-    if y - 1 >= 0:
-        grid.append((x, y - 1))
-    if y + 1 < max_y:
-        grid.append((x, y + 1))
-
-    # for i in range(max(0, x - 1), min(max_x, x + 2)):
-    #     for j in range(max(0, y - 1), min(max_y, y + 2)):
-    #         grid.append((i, j))
     return grid
 
 
 if __name__ == '__main__':
-    flowerdata: dict = loadFlowerData("flowerList3.txt")
+    flowerdata: dict = loadFlowerData("flowerList1.txt")
     print(flowerdata)
-    hidden_field = createHiddenField(flowerdata, "field3.csv")
+    hidden_field = createHiddenField(flowerdata, "field1.csv")
     showField(hidden_field)
     visible_field = createVisibleField(hidden_field)
     showField(visible_field)
-    beelineIntro(flowerdata, 4, 4)
-    for x in range(0, 15):
-        for y in range(0, 10):
+
+    beelineIntro(flowerdata, 5, 5)
+    max_x = len(visible_field[0])
+    max_y = len(visible_field)
+
+    for x in range(0, max_x):
+        for y in range(0, max_y):
             print(f'{(x, y) = }')
             visible_field = createVisibleField(hidden_field)
             beeExplore(hidden_field, visible_field, x=x, y=y, bee_type='W', flower_data=flowerdata)
             showField(visible_field)
-
-    # showField(visible_field)

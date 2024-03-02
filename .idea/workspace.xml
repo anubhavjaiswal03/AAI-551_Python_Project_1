@@ -4,31 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64ae935f-f525-44ca-ba7e-29158b9a0dca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Project 1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BeeFunctions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Beeline.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1SampleOutputs/ExampleOutputError.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1SampleOutputs/ExampleOutputFailure.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1SampleOutputs/ExampleOutputSuccess.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1SampleOutputs/field1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1SampleOutputs/field2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1SampleOutputs/field3.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1SampleOutputs/flowerList1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1SampleOutputs/flowerList2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1SampleOutputs/flowerList3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/field1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/field2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/field3.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flowerList1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flowerList2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flowerList3.txt" afterDir="false" />
+    <list default="true" id="64ae935f-f525-44ca-ba7e-29158b9a0dca" name="Changes" comment="final">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeeFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/BeeFunctions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +63,15 @@
       <option name="presentableId" value="Default" />
       <updated>1709258971726</updated>
     </task>
+    <task id="LOCAL-00001" summary="final">
+      <option name="closed" value="true" />
+      <created>1709355666920</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709355666920</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -92,5 +79,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="final" />
+    <option name="LAST_COMMIT_MESSAGE" value="final" />
   </component>
 </project>
