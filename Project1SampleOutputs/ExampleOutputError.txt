@@ -1,0 +1,3 @@
+Please enter the name of the file containing your flower to points mapping:flowerList3.txt
+Please enter the name of the file containing your field:field2.csv
+L is not a known flower type for this field!

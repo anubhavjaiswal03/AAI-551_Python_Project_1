@@ -1,0 +1,5 @@
+B,Bee Balm,5
+I,Indigo,4
+S,Black-eyed Susan,3
+C,Coneflower,2
+J,Joe-pye Weed,1

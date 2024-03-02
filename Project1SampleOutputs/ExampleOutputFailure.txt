@@ -1,0 +1,119 @@
+Please enter the name of the file containing your flower to points mapping:flowerList1.txt
+Please enter the name of the file containing your field:field1.csv
+Welcome to Beeline!
+You are the queen bee tasked with ensuring your hive produces enough honey.
+Honey is created from pollen in flowers, which you will need to send bees out to find and harvest!
+You have two kinds of bees: scout bees and worker bees.
+Scout bees fly out to a location in the field and reveal 3x3 area around the specified location
+Worker bees fly out to a location, harvest flowers in a 3x3 area around the specified location,
+and also reveal the area they have harvested. However, you only have 5 scout bees and 5 worker
+bees to obtain the 20 units of pollen you need to produce enough honey. Note, once a bee has been
+sent out it cannot be used again and a flower can only be harvested once! Oh, and watch out for pitcher plants!
+They'll trap your bees and prevent them from returning to the hive. Good luck!
+
+The flowers contains the following units of pollen:
+B: Bee Balm, 5 units of pollen
+L: Lantana, 3 units of pollen
+C: Coneflower, 2 units of pollen
+G: Goldenrod, 1 units of pollen
+You have 5 scout bees left, 5 worker bees left, and have harvested 0 units of pollen.
+H is the hive, U is a used flower
+  0 1 2 3 4 5 6 7 8 9
+0| | | | | | | | | | |
+1| | | | | | | | | | |
+2| | | | | | | | | | |
+3| | | | | | | | | | |
+4| | | | | | | | | | |
+5| | | | |H| | | | | |
+6| | | | | | | | | | |
+7| | | | | | | | | | |
+8| | | | | | | | | | |
+9| | | | | | | | | | |
+
+What type of bee would you like to send out (S for scout or W for worker):W
+Where would you like to send the bee
+0 <= x < 10:11
+0 <= y < 10:0
+Sending out the worker
+Your bee has flown outside the field and gotten lost!
+You have 5 scout bees left, 4 worker bees left, and have harvested 0 units of pollen.
+H is the hive, U is a used flower
+  0 1 2 3 4 5 6 7 8 9
+0| | | | | | | | | | |
+1| | | | | | | | | | |
+2| | | | | | | | | | |
+3| | | | | | | | | | |
+4| | | | | | | | | | |
+5| | | | |H| | | | | |
+6| | | | | | | | | | |
+7| | | | | | | | | | |
+8| | | | | | | | | | |
+9| | | | | | | | | | |
+
+What type of bee would you like to send out (S for scout or W for worker):W
+Where would you like to send the bee
+0 <= x < 10:5
+0 <= y < 10:12
+Sending out the worker
+Your bee has flown outside the field and gotten lost!
+You have 5 scout bees left, 3 worker bees left, and have harvested 0 units of pollen.
+H is the hive, U is a used flower
+  0 1 2 3 4 5 6 7 8 9
+0| | | | | | | | | | |
+1| | | | | | | | | | |
+2| | | | | | | | | | |
+3| | | | | | | | | | |
+4| | | | | | | | | | |
+5| | | | |H| | | | | |
+6| | | | | | | | | | |
+7| | | | | | | | | | |
+8| | | | | | | | | | |
+9| | | | | | | | | | |
+
+What type of bee would you like to send out (S for scout or W for worker):W
+Where would you like to send the bee
+0 <= x < 10:4
+0 <= y < 10:14
+Sending out the worker
+Your bee has flown outside the field and gotten lost!
+You have 5 scout bees left, 2 worker bees left, and have harvested 0 units of pollen.
+H is the hive, U is a used flower
+  0 1 2 3 4 5 6 7 8 9
+0| | | | | | | | | | |
+1| | | | | | | | | | |
+2| | | | | | | | | | |
+3| | | | | | | | | | |
+4| | | | | | | | | | |
+5| | | | |H| | | | | |
+6| | | | | | | | | | |
+7| | | | | | | | | | |
+8| | | | | | | | | | |
+9| | | | | | | | | | |
+
+What type of bee would you like to send out (S for scout or W for worker):W
+Where would you like to send the bee
+0 <= x < 10:15
+0 <= y < 10:5
+Sending out the worker
+Your bee has flown outside the field and gotten lost!
+You have 5 scout bees left, 1 worker bees left, and have harvested 0 units of pollen.
+H is the hive, U is a used flower
+  0 1 2 3 4 5 6 7 8 9
+0| | | | | | | | | | |
+1| | | | | | | | | | |
+2| | | | | | | | | | |
+3| | | | | | | | | | |
+4| | | | | | | | | | |
+5| | | | |H| | | | | |
+6| | | | | | | | | | |
+7| | | | | | | | | | |
+8| | | | | | | | | | |
+9| | | | | | | | | | |
+
+What type of bee would you like to send out (S for scout or W for worker):W
+Where would you like to send the bee
+0 <= x < 10:11
+0 <= y < 10:5
+Sending out the worker
+Your bee has flown outside the field and gotten lost!
+Oh no! You have not made enough honey. You have been deposed as queen.

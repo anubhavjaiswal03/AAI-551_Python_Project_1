@@ -1,0 +1,4 @@
+B,Bee Balm,5
+L,Lantana,3
+C,Coneflower,2
+G,Goldenrod,1
