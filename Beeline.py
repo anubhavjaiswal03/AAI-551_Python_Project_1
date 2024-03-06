@@ -38,7 +38,7 @@ def main():
 
     bee_type_msg = ["\033[93;1mThat's too fancy to be a bee, why dont you try W or S?\033[0m",
                     "\033[93;1mI don't think that's even a bee.\033[0m",
-                    "\033[93;1mAs a queen you should be more informed, try again with a W or S.\033[0m",
+                    "\033[93;1mHmm.. we got only Workers and Scouts you have to try again with a W or a S.\033[0m",
                     "\033[93;1mToo Bee or not to Bee? That was not a Bee.\033[0m",
                     "\033[93;1mNope, try again.\033[0m"]
 

@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64ae935f-f525-44ca-ba7e-29158b9a0dca" name="Changes" comment="progress">
-      <change afterPath="$PROJECT_DIR$/field4.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fieldGenerator.py" afterDir="false" />
+    <list default="true" id="64ae935f-f525-44ca-ba7e-29158b9a0dca" name="Changes" comment="fieldGenerator.py working.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BeeFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/BeeFunctions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Beeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/Beeline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fieldGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/fieldGenerator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +81,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709357558369</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fieldGenerator.py working.">
+      <option name="closed" value="true" />
+      <created>1709454483762</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709454483762</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -93,6 +99,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="final" />
     <MESSAGE value="progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="progress" />
+    <MESSAGE value="fieldGenerator.py working." />
+    <option name="LAST_COMMIT_MESSAGE" value="fieldGenerator.py working." />
   </component>
 </project>

@@ -8,6 +8,10 @@ import random
 
 
 def fieldGenerator():
+    """
+    Creates the foeld#.csv files, prompts the user for the file
+    :return:None
+    """
 
     file_name = input("Enter a suitable field filename (e.g. field4.csv): ")
     while os.path.exists(file_name):

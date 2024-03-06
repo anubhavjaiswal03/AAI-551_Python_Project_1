@@ -22,6 +22,7 @@ def loadFlowerData(file_name: str = '') -> dict:
         file_name = input('Please enter the name of the file containing your flower to points mapping: ')
         if not os.path.exists(file_name):
             print('\033[91;1m%s\033[0m file does not exist!' % file_name)
+
     flower_file = open(file_name, 'r')  # Opens the file for reading.
     flower_file_line = flower_file.readline()  # Reads the first Line.
     while flower_file_line:  # Keeps Reading until EOF
@@ -31,6 +32,7 @@ def loadFlowerData(file_name: str = '') -> dict:
             flower_file_line_elements)  # # Creates the dictionary with tuple values.
         flower_file_line = flower_file.readline()  # Reads the next line.
     flower_file.close()
+
     return flowerData
 
 
@@ -336,7 +338,7 @@ if __name__ == '__main__':
                 err.args[1].close()
                 quit(-1)
             visible_field = createVisibleField(hidden_field)
-            harvested_pollen = beeExplore(hidden_field, visible_field, x, y, bee_type, flowerdata, debug=True)
+            harvested_pollen = beeExplore(hidden_field, visible_field, x, y, bee_type, flowerdata, debug=False)
             print(f"You have {total_scouts} scout bees left, {total_workers} worker bees left, "
                   f"and have harvested {harvested_pollen} units of pollen.")
             showField(visible_field)
