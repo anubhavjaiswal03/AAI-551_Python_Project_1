@@ -192,6 +192,7 @@ def beeExplore(hidden_field: list, visible_field: list, bee_x: int, bee_y: int, 
             if hidden_field[bee_y][bee_x] in list(flower_data.keys()):
                 pollen_harvested += int(flower_data[hidden_field[bee_y][bee_x]][2])
                 hidden_field[bee_y][bee_x] = 'U'  # Mark The Flower as Used if bee_type is 'W'
+        visible_field[bee_y][bee_x] = hidden_field[bee_y][bee_x]  # Reveal the location of the flowers.
 
     return pollen_harvested
 
