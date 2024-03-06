@@ -1,7 +1,18 @@
 # Name: Anubhav Jaiswal
 # Date: 27 Feb 2024
-# Description: Contains various functions for the Beeline Game, loadFlowerData() loads the data in flowerList.* files
-# into a dictionary and returns it,
+# Description: Contains various functions for the Beeline Game,
+# loadFlowerData() loads the data in flowerList.* files into a dictionary and returns it.
+# createHiddenField() creates the hidden field/ hidden from the view of the user it also loads the field file to do so.
+# createVisibleField() creates a copy of the hidden field where only the Hive location is visible all other spots are
+# blanks.
+# showField() displays the visible field to the user.
+# beelineIntro() displays the Introduction to the game, which also introduces the mechanism scores and
+# pitfalls to be aware of.
+# beeExplore() is the core mechanics of the game it handles essential functions like selecting the bee,
+# uncovering the grid harvesting pollens.
+# findGridCoordinates() is a function made outside the beeExplore functions to make the code look neater.
+# It correctly finds all the points surrounding the x,y co-ordinates.
+
 
 import os
 import random
@@ -16,7 +27,7 @@ def loadFlowerData() -> dict:
     """
 
     flowerData: dict = {}  # Used to build the dictionary of the file
-    file_name: str = ''  # Holds the flower data file's file name, (e.g. flowerList1.txt or flowerList2.txt, etc)
+    file_name: str = ''  # Holds the flower data file's file name, (e.g. flowerList1.txt or flowerList2.txt, etc.)
     while not os.path.exists(file_name):
         file_name = input('Please enter the name of the file containing your flower to points mapping: ')
         if not os.path.exists(file_name):
@@ -62,7 +73,7 @@ def createHiddenField(flower_data: dict) -> list:
         for element in field_file_line_elements:
             if element not in valid_fields:
                 # Raises a type error if an element is outside to the valid list of elements,
-                # we also send the file object so we can close it in the beeline function()
+                # we also send the file object, so we can close it in the beeline function()
                 raise TypeError('\033[91;1m%s\033[0m in file \033[91;1m%s\033[0m is not a known flower type!' % (
                     element, file_name), field_file)
         field2D.append(field_file_line_elements)
@@ -124,7 +135,7 @@ def showField(field: list):
 
 def beelineIntro(flower_data: dict, total_scout_bees: int, total_worker_bees: int, target_pollen: int):
     """
-    Prints the introduction to the Beeline Game with some important parameters.
+    Prints the introduction to the Beeline Game with some important parameters, and game Rules.
     :param flower_data: Dictionary containing the flower data as a view.
     :param total_scout_bees: The total number of Scout Bees you start the game with.
     :param total_worker_bees: The total number of Worker Bees you start the game with.
@@ -144,8 +155,8 @@ def beelineIntro(flower_data: dict, total_scout_bees: int, total_worker_bees: in
     print("sent out it cannot be used again and a flower can only be harvested once! Oh, and watch out "
           "for pitcher plants!")
     print("They'll trap your bees and prevent them from returning to the hive. Good luck!\n")
-    print("The flowers contains the following units of pollen:")
 
+    print("The flowers contains the following units of pollen:")
     for key in list(flower_data.keys()):
         print("%s: %s, %s units of pollen" % (flower_data[key][0], flower_data[key][1], flower_data[key][2]))
 
@@ -154,7 +165,8 @@ def beeExplore(hidden_field: list, visible_field: list, bee_x: int, bee_y: int, 
                flower_data: dict) -> int:
     """
     This is the heart of the game, this function checks if the target bee coordinates is within the field or not, checks
-    the 3x3 grid for
+    the 3x3 grid for pitcher plants or not, according to the type of bee decides to show the field with flower locations
+    or harvest the flowers with bees.
     :param hidden_field: Hidden field with all the locations
     :param visible_field: Field that is shown to the user
     :param bee_x: The target x location in the field entered by the user for a certain bee.
@@ -165,8 +177,8 @@ def beeExplore(hidden_field: list, visible_field: list, bee_x: int, bee_y: int, 
     """
 
     pollen_harvested: int = 0   # The variable to store the number of pollen harvested by a bee.
-    max_x = len(visible_field[0])   # The
-    max_y = len(visible_field)
+    max_x = len(visible_field[0])   # The Horizontal Length of the field
+    max_y = len(visible_field)      # The Vertical Length of the field
 
     # This checks if the bee coordinates are valid.
     if bee_x >= max_x or bee_x < 0 or bee_y >= max_y or bee_y < 0:
@@ -182,7 +194,7 @@ def beeExplore(hidden_field: list, visible_field: list, bee_x: int, bee_y: int, 
 
     # If the bee explores a 3x3 grid with a pitcher plant we return 0 and the grid is not revealed
     if 'P' in field_symbols:
-        print("\033[91;1mSigh.... Your bee must have fallen into a pitcher plant because it never returned!",
+        print("\033[93;1mSigh... Your bee must have fallen into a \033[1;4mpitcher\033[0m\033[93;1m plant because it never returned!",
               end='\033[0m\n')
         return pollen_harvested  # Currently it is Zero 0.
 
@@ -241,7 +253,7 @@ def findGridCoordinates(max_x: int, max_y: int, x: int, y: int) -> list:
 
 
 if __name__ == '__main__':
-    pass
+    print("Please run the 'Beeline.py' file.")
     # Test Initial Data
     # This test only tests the functionality of each method, not its flow.
     # The Code below was used for extensively testing the above functions.
